@@ -23,55 +23,6 @@ using namespace std;
 //  SECTION 1 – WARM-UP  (~ 5 min)
 //  Goal: quickly recall variables, cin, cout, and arithmetic.
 // ============================================================
-double celsiusToFahrenheit(double c)
-{
-    double Fahrenheit = c * 9 / 5 + 32;
-    return Fahrenheit;
-}
-
-bool isPrime(int n)
-{
-    if (n <= 1) return false;
-    
-    if (n <= 3) return true;
-    
-    if (n % 2 == 0 || n % 3 == 0) return false;
-    
-    for (int i = 5; i * i <= n; i += 6)
-    {
-        if (n % i == 0 || n % (i + 2) == 0) {
-            return false;
-        }
-    }
-}
-
-int maxOfThree(int a, int b, int c)
-{
-    if (a > b && a > c)
-    {
-        return a;
-    }
-
-    else if (b > c && b > a)
-    {
-        return b;
-    }
-    else if (c > a && c > b)
-    {
-        return c;
-    }
-}
-
-double average(double arr[], int size)
-{
-    double sum = 0.0;
-  for (int i = 0; i < size; i++)
-  {
-      sum += arr[i];
-  }
-    return sum / size;
-}
-
 
 int main()
 {
@@ -290,6 +241,54 @@ int main()
 
 // ============================================================
 //  WRITE YOUR FUNCTIONS HERE  (above main, below this comment)
+double celsiusToFahrenheit(double c)
+{
+    double Fahrenheit = c * 9 / 5 + 32;
+    return Fahrenheit;
+}
+
+bool isPrime(int n)
+{
+    if (n <= 1) return false;
+    
+    if (n <= 3) return true;
+    
+    if (n % 2 == 0 || n % 3 == 0) return false;
+    
+    for (int i = 5; i * i <= n; i += 6)
+    {
+        if (n % i == 0 || n % (i + 2) == 0) {
+            return false;
+        }
+    }
+}
+
+int maxOfThree(int a, int b, int c)
+{
+    if (a > b && a > c)
+    {
+        return a;
+    }
+
+    else if (b > c && b > a)
+    {
+        return b;
+    }
+    else if (c > a && c > b)
+    {
+        return c;
+    }
+}
+
+double average(double arr[], int size)
+{
+    double sum = 0.0;
+    for (int i = 0; i < size; i++)
+    {
+        sum += arr[i];
+    }
+    return sum / size;
+}
 //  OR directly above main() – both placements work.
 //
 //  Functions needed:
