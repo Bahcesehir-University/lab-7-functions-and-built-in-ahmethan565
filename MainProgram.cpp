@@ -38,6 +38,8 @@ bool isPrime(int n)
     {
         if (n % i == 0) return false;
     }
+
+    return true;
 }
 
 int maxOfThree(int a, int b, int c)
@@ -55,7 +57,7 @@ double average(double arr[], int size)
     {
         sum += arr[i];
     }
-    return sum / (double)size;
+    return sum / size;
 }
 
 int main()
