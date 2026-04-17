@@ -55,7 +55,7 @@ double average(double arr[], int size)
     {
         sum += arr[i];
     }
-    return sum / size;
+    return sum / (double)size;
 }
 
 int main()
