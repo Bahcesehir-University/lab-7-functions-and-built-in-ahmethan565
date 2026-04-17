@@ -34,38 +34,18 @@ bool isPrime(int n)
 {
     if (n <= 1) return false;
     
-    if (n <= 3) return true;
-    
-    if (n % 2 == 0 || n % 3 == 0) return false;
-    
-    for (int i = 5; i * i <= n; i += 6)
+    for (int i = 2; i <= sqrt((double)n); i++)
     {
-        if (n % i == 0 || n % (i + 2) == 0) {
-            return false;
-        }
+        if (n % i == 0) return false;
     }
 }
 
 int maxOfThree(int a, int b, int c)
 {
-    if (a > b && a > c)
-    {
-        return a;
-    }
-
-    else if (b > c && b > a)
-    {
-        return b;
-    }
-    else if (c > a && c > b)
-    {
-        return c;
-    }
-
-    else if (a == b &&  a == c)
-    {
-        return a;
-    }
+    int maxValue = a;
+    if (b > maxValue) maxValue = b;
+    if (c > maxValue) maxValue = c;
+    return maxValue;
 }
 
 double average(double arr[], int size)
