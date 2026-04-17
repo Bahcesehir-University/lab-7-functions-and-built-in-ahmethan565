@@ -26,7 +26,7 @@ using namespace std;
 
 double celsiusToFahrenheit(double c)
 {
-    double Fahrenheit = c * 9 / 5 + 32;
+    double Fahrenheit = c * 9.0 / 5.0 + 32;
     return Fahrenheit;
 }
 
