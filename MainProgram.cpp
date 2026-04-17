@@ -23,42 +23,42 @@ using namespace std;
 //  SECTION 1 – WARM-UP  (~ 5 min)
 //  Goal: quickly recall variables, cin, cout, and arithmetic.
 // ============================================================
-double celsiusToFahrenheit(double cel)
+double celsiusToFahrenheit(double c)
 {
-    double Fahrenheit = cel * 9 / 5 + 32;
+    double Fahrenheit = c * 9 / 5 + 32;
     return Fahrenheit;
 }
 
-bool isPrime(int num)
+bool isPrime(int n)
 {
-    if (num <= 1) return false;
+    if (n <= 1) return false;
     
-    if (num <= 3) return true;
+    if (n <= 3) return true;
     
-    if (num % 2 == 0 || num % 3 == 0) return false;
+    if (n % 2 == 0 || n % 3 == 0) return false;
     
-    for (int i = 5; i * i <= num; i += 6)
+    for (int i = 5; i * i <= n; i += 6)
     {
-        if (num % i == 0 || num % (i + 2) == 0) {
+        if (n % i == 0 || n % (i + 2) == 0) {
             return false;
         }
     }
 }
 
-int maxOfThree(int number1, int number2, int number3)
+int maxOfThree(int a, int b, int c)
 {
-    if (number1 > number2 && number1 > number3)
+    if (a > b && a > c)
     {
-        return number1;
+        return a;
     }
 
-    else if (number2 > number3 && number2 > number1)
+    else if (b > c && b > a)
     {
-        return number2;
+        return b;
     }
-    else if (number3 > number1 && number3 > number2)
+    else if (c > a && c > b)
     {
-        return number3;
+        return c;
     }
 }
 
